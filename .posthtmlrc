@@ -1,0 +1,23 @@
+{
+  "plugins": {
+    "posthtml-extend": {
+        "root": "./src"
+    },
+    "posthtml-modules": {
+      "root": "./src/"
+    },
+    "posthtml-alt-always": {},
+    "posthtml-inline-svg": {
+      "cwd": "./src/assets/icons",
+      "tag": "Icon",
+      "attr": "src",
+      "svgo": {}
+    },
+    "posthtml-beautify": {
+        "rules": {
+            "indent": 4,
+            "blankLines": false
+        }
+    }
+  }
+}

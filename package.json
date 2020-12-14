@@ -1,0 +1,51 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "description": "Static site template. Just install dependencies and start coding.",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build ./src/*.html",
+    "build:dev": "parcel build ./src/*.html --no-source-maps --no-content-hash --no-minify --no-cache",
+    "dev": "concurrently --kill-others 'node ./tools/watcher.js' 'parcel ./src/index.html --open'",
+    "start": "npm run build:dev && npm run dev",
+    "export": "npm run build:dev && node ./tools/archiver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pepa Linha",
+  "devDependencies": {
+    "archiver": "^5.1.0",
+    "concurrently": "^5.3.0",
+    "fs": "0.0.1-security",
+    "multi-glob": "^1.0.2",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.16",
+    "parcel-plugin-imagemin": "^4.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-alt-always": "^1.0.1",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-extend": "^0.6.0",
+    "posthtml-inline-svg": "^0.2.0",
+    "posthtml-modules": "^0.6.4",
+    "sass": "^1.29.0"
+  },
+  "dependencies": {},
+  "customDistStructure": {
+    "config": {
+      "assets/js": [
+        ".js",
+        ".js.map"
+      ],
+      "assets/images": [
+        ".jpg",
+        ".png"
+      ],
+      "assets/css": [
+        ".css",
+        ".css.map"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  }
+}

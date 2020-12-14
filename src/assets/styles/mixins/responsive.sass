@@ -1,0 +1,63 @@
+=respond($minWidth, $maxWidth)
+    @media (min-width: $minWidth * 1px) and (max-width: $maxWidth * 1px)
+        @content
+
+=respondMin($width)
+    @media (min-width: $width * 1px)
+        @content
+
+=respondMax($width)
+    @media (max-width: $width * 1px)
+        @content
+
+=respondMobileM
+    +respondMin(375)
+        @content
+
+=respondMobileMOnly
+    +respond(375, 425 - 1)
+        @content
+
+=respondMobileMMax
+    +respondMax(425 - 1)
+        @content
+
+=respondMobileL
+    +respondMin(425)
+        @content
+
+=respondMobileLOnly
+    +respond(425, 768 - 1)
+        @content
+
+=respondMobileLMax
+    +respondMax(768 - 1)
+        @content
+
+=respondTablet
+    +respondMin(768)
+        @content
+
+=respondTabletOnly
+    +respond(768, 1024 - 1)
+        @content
+
+=respondTabletMax
+    +respondMax(1024 - 1)
+        @content
+
+=respondLaptop
+    +respondMin(1024)
+        @content
+
+=respondLaptopOnly
+    +respond(1024, 1440 - 1)
+        @content
+
+=respondLaptopMax
+    +respondMin(1440 - 1)
+        @content
+
+=respondLaptopL
+    +respondMin(1440)
+        @content
