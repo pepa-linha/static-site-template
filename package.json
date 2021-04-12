@@ -21,6 +21,7 @@
     "parcel-plugin-custom-dist-structure": "^1.1.16",
     "parcel-plugin-imagemin": "^4.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "posthtml-alt-always": "^1.0.1",
     "posthtml-beautify": "^0.7.0",
     "posthtml-extend": "^0.6.0",
@@ -28,7 +29,6 @@
     "posthtml-modules": "^0.6.4",
     "sass": "^1.29.0"
   },
-  "dependencies": {},
   "customDistStructure": {
     "config": {
       "assets/js": [
@@ -47,5 +47,14 @@
     "options": {
       "development": true
     }
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "vendor",
+        "staticOutDir": "assets/vendor"
+      }
+    ],
+    "watcherGlob": "**"
   }
 }
