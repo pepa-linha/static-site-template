@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "parcel build ./src/*.html",
-    "build:dev": "parcel build ./src/*.html --no-source-maps --no-content-hash --no-minify --no-cache",
+    "build:dev": "parcel build ./src/*.html --no-source-maps --no-content-hash --no-minify --no-cache --public-url ./",
     "dev": "concurrently --kill-others 'node ./tools/watcher.js' 'parcel ./src/index.html --open'",
     "start": "npm run build:dev && npm run dev",
     "export": "npm run build:dev && node ./tools/archiver.js",
